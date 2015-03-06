@@ -1,0 +1,33 @@
+{
+  "name": "CampaignIndia",
+  "version": "1.0.0",
+  "description": "Campaign India Application",
+  "keywords": [
+    "OpenShift",
+    "Node.js",
+    "application",
+    "openshift"
+  ],
+  "author": {
+    "name": "Harshita Kasera",
+    "email": "hkasera5@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hkasera/campaign-india"
+  },
+
+  "engines": {
+    "node": ">= 0.6.0",
+    "npm": ">= 1.0.0"
+  },
+
+  "dependencies": {
+    "express": "~3.4.4"
+  },
+  "devDependencies": {},
+  "bundleDependencies": [],
+
+  "private": true,
+  "main": "server.js"
+}
