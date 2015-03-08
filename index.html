@@ -21,18 +21,16 @@
       <div ng-controller="PhotoGridCtrl">
         <ul class="flowGrid" ng-flow-grid="demoGird" min-item-width="200">
           <li class="flowGridItem" ng-repeat="campaign in campaigns">
-              <a href="{{campaign.url}}" class="flowGridImg"><img ng-src="{{campaign.img}}"></a>
+              <a ng-href="{{campaign.url}}" class="flowGridImg"><img ng-src="{{campaign.img}}"></a>
               <p class="flowGridMetadata">
-                <span>
-                  {{campaign.name}}
+                <span ng-bind="campaign.name">
                 </span>
                 <br/>
-                <span class="shortDesc">
-                  {{campaign.shortDesc}}
+                <span class="shortDesc" ng-bind="campaign.shortDesc">
                 </span>
                 <br />
                 <span class="shortDesc">
-                  <i>by</i>&nbsp;<a href="{{campaign.ngo.url}}">{{campaign.ngo.name}}</a>
+                  <i>by</i>&nbsp;<a ng-href="{{campaign.ngo.url}}" ng-bind="campaign.ngo.name"></a>
                 </span>
               </p>
           </li>

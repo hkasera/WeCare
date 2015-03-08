@@ -88,7 +88,7 @@ body.campaign-page,body.ngo-page {
     color:#FFF
 }
 
-.campaign-page .pull-left,.campaign-page .panel-heading,.campaign-page .caption {
+.campaign-page .pull-left,.campaign-page .panel-heading,.campaign-page .caption,.campaign-page .text-muted {
     color:#449F93
 }
 
@@ -108,10 +108,14 @@ body.campaign-page,body.ngo-page {
     color:#FFF
 }
 
-.ngo-page .pull-left,.ngo-page .panel-heading,.ngo-page .caption {
+.ngo-page .pull-left,.ngo-page .panel-heading,.ngo-page .caption,.ngo-page .text-muted {
     color:#75A0CC
 }
 
 .breadcrumb {
     background-color:#FFF
+}
+.panel-body{
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

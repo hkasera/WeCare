@@ -42,7 +42,7 @@ app.controller('PhotoGridCtrl',['$scope','fgDelegate',function($scope,fgDelegate
                url : '/ngo/n111001'
             },
             url: '/campaign/c11001',
-            shortDesc: 'Lorem ipsum'
+            shortDesc: 'Hope in lives of millions of people'
         },
         {
             img:'/img/camp5.jpeg',
@@ -52,7 +52,7 @@ app.controller('PhotoGridCtrl',['$scope','fgDelegate',function($scope,fgDelegate
                url : '/ngo/n111001'
             },
             url: '/campaign/c11001',
-            shortDesc: 'Lorem ipsum'
+            shortDesc: 'Promote awareness among people'
         },
         {
             img:'/img/camp6.jpeg',
@@ -72,7 +72,7 @@ app.controller('PhotoGridCtrl',['$scope','fgDelegate',function($scope,fgDelegate
                url : '/ngo/n111001'
             },
             url: '/campaign/c11001',
-            shortDesc: 'Lorem ipsum'
+            shortDesc: 'Lets get rid of habits that take your lives'
         },
         {
             img:'/img/camp8.jpg',
@@ -82,7 +82,7 @@ app.controller('PhotoGridCtrl',['$scope','fgDelegate',function($scope,fgDelegate
                url : '/ngo/n111001'
             },
             url: '/campaign/c11001',
-            shortDesc: 'Lorem ipsum'
+            shortDesc: 'Lets fulfill the dreams in those innocent eyes'
         },
         {
             img:'/img/camp9.jpg',
@@ -92,7 +92,7 @@ app.controller('PhotoGridCtrl',['$scope','fgDelegate',function($scope,fgDelegate
                url : '/ngo/n111001'
             },
             url: '/campaign/c11001',
-            shortDesc: 'Lorem ipsum'
+            shortDesc: 'Together we can make others smile'
         },
         {
             img:'/img/camp10.jpg',
@@ -102,7 +102,7 @@ app.controller('PhotoGridCtrl',['$scope','fgDelegate',function($scope,fgDelegate
                url : '/ngo/n111001'
             },
             url: '/campaign/c11001',
-            shortDesc: 'Lorem ipsum'
+            shortDesc: 'Awareness is growing.'
         },
         {
             img:'/img/camp11.jpeg',
@@ -112,17 +112,17 @@ app.controller('PhotoGridCtrl',['$scope','fgDelegate',function($scope,fgDelegate
                url : '/ngo/n111001'
             },
             url: '/campaign/c11001',
-            shortDesc: 'Lorem ipsum'
+            shortDesc: 'One girl with courage is a revolution'
         },
         {
             img:'/img/camp12.png',
-            name:'Paheli',
+            name:'Health is Wealth',
             ngo: {
                name : 'Hope Foundation',
                url : '/ngo/n111001'
             },
             url: '/campaign/c11001',
-            shortDesc: 'Lorem ipsum'
+            shortDesc: 'Spreading awareness among people about HIV'
         },
         
     ]
