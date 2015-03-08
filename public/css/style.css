@@ -46,7 +46,14 @@ body.campaign-page,body.ngo-page{
 	margin: 0;
 }
 
-
+.load-more{
+	text-align: center;
+  font-size: 18px;
+  padding: 5px;
+  margin: 0 10px;
+  text-shadow: 1px 0px #e3e3e3;
+  cursor: pointer;
+}
 
 .campaign-page .page-header {
 	text-align: center;

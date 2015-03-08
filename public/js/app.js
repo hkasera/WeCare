@@ -4,7 +4,135 @@ var app = angular.module("CampaignIndiaCtrl", ["ngFlowGrid"]);
 app.controller('PhotoGridCtrl',['$scope','fgDelegate',function($scope,fgDelegate){
     $scope.campaigns = [
         {
-            img:'http://placehold.it/300x600/E97452/fff',
+            img:'/img/camp1.jpeg',
+            name:'Udaan',
+            ngo: {
+               name : 'Hope Foundation',
+               url : '/ngo/n111001'
+            },
+            shortDesc: 'Rise and fly',
+            url: '/campaign/c11001',
+            id: '110001'
+        },
+        {
+            img:'/img/camp2.jpeg',
+            name:'Hope',
+            ngo: {
+               name : 'Hope Foundation',
+               url : '/ngo/n111001'
+            },
+            url: '/campaign/c11001',
+            shortDesc: 'We make you see the world with a new hope..'
+        },
+        {
+            img:'/img/camp3.jpeg',
+            name:'Khusiyaan',
+            ngo: {
+               name : 'Hope Foundation',
+               url : '/ngo/n111001'
+            },
+            url: '/campaign/c11001',
+            shortDesc: 'We spread happiness'
+        },
+        {
+            img:'/img/camp4.jpeg',
+            name:'Umeed',
+            ngo: {
+               name : 'Hope Foundation',
+               url : '/ngo/n111001'
+            },
+            url: '/campaign/c11001',
+            shortDesc: 'Lorem ipsum'
+        },
+        {
+            img:'/img/camp5.jpeg',
+            name:'New Horizon',
+            ngo: {
+               name : 'Hope Foundation',
+               url : '/ngo/n111001'
+            },
+            url: '/campaign/c11001',
+            shortDesc: 'Lorem ipsum'
+        },
+        {
+            img:'/img/camp6.jpeg',
+            name:'Nanhi si duniya',
+            ngo: {
+               name : 'Hope Foundation',
+               url : '/ngo/n111001'
+            },
+            url: '/campaign/c11001',
+            shortDesc: 'Lorem ipsum'
+        },
+        {
+            img:'/img/camp7.jpeg',
+            name:'Umeed',
+            ngo: {
+               name : 'Hope Foundation',
+               url : '/ngo/n111001'
+            },
+            url: '/campaign/c11001',
+            shortDesc: 'Lorem ipsum'
+        },
+        {
+            img:'/img/camp8.jpg',
+            name:'Sapne',
+            ngo: {
+               name : 'Hope Foundation',
+               url : '/ngo/n111001'
+            },
+            url: '/campaign/c11001',
+            shortDesc: 'Lorem ipsum'
+        },
+        {
+            img:'/img/camp9.jpg',
+            name:'Muskaan',
+            ngo: {
+               name : 'Hope Foundation',
+               url : '/ngo/n111001'
+            },
+            url: '/campaign/c11001',
+            shortDesc: 'Lorem ipsum'
+        },
+        {
+            img:'/img/camp10.jpg',
+            name:'Roshni',
+            ngo: {
+               name : 'Hope Foundation',
+               url : '/ngo/n111001'
+            },
+            url: '/campaign/c11001',
+            shortDesc: 'Lorem ipsum'
+        },
+        {
+            img:'/img/camp11.jpeg',
+            name:'Khushi',
+            ngo: {
+               name : 'Hope Foundation',
+               url : '/ngo/n111001'
+            },
+            url: '/campaign/c11001',
+            shortDesc: 'Lorem ipsum'
+        },
+        {
+            img:'/img/camp12.png',
+            name:'Paheli',
+            ngo: {
+               name : 'Hope Foundation',
+               url : '/ngo/n111001'
+            },
+            url: '/campaign/c11001',
+            shortDesc: 'Lorem ipsum'
+        },
+        
+    ]
+
+    $scope.loadText = "Load More..";
+    $scope.loaded = false;
+
+    $scope.newCampaigns = [
+        {
+            img:'http://lorempixel.com/300/600/transport',
             name:'Udaan',
             ngo: {
                name : 'Lorem',
@@ -15,7 +143,7 @@ app.controller('PhotoGridCtrl',['$scope','fgDelegate',function($scope,fgDelegate
             id: '110001'
         },
         {
-            img:'http://placehold.it/300x400/E59649/fff',
+            img:'http://lorempixel.com/300/400/abstract',
             name:'Hope',
             ngo: {
                name : 'Lorem',
@@ -25,7 +153,7 @@ app.controller('PhotoGridCtrl',['$scope','fgDelegate',function($scope,fgDelegate
             shortDesc: 'We make you see the world with a new hope..'
         },
         {
-            img:'http://placehold.it/300x300/4C6EB4/fff',
+            img:'http://lorempixel.com/300/300/people',
             name:'Khusiyaan',
             ngo: {
                name : 'Lorem',
@@ -35,7 +163,7 @@ app.controller('PhotoGridCtrl',['$scope','fgDelegate',function($scope,fgDelegate
             shortDesc: 'We spread happiness'
         },
         {
-            img:'http://placehold.it/300x250/449F93/fff',
+            img:'http://lorempixel.com/300/250/people',
             name:'Umeed',
             ngo: {
                name : 'Lorem',
@@ -45,7 +173,7 @@ app.controller('PhotoGridCtrl',['$scope','fgDelegate',function($scope,fgDelegate
             shortDesc: 'Lorem ipsum'
         },
         {
-            img:'http://placehold.it/200x320/936FBC/fff',
+            img:'http://lorempixel.com/200/320/nature',
             name:'New Horizon',
             ngo: {
                name : 'Lorem',
@@ -55,7 +183,7 @@ app.controller('PhotoGridCtrl',['$scope','fgDelegate',function($scope,fgDelegate
             shortDesc: 'Lorem ipsum'
         },
         {
-            img:'http://placehold.it/400x500/D25064/fff',
+            img:'http://lorempixel.com/400/500/technics',
             name:'Nanhi si duniya',
             ngo: {
                name : 'Lorem',
@@ -65,7 +193,7 @@ app.controller('PhotoGridCtrl',['$scope','fgDelegate',function($scope,fgDelegate
             shortDesc: 'Lorem ipsum'
         },
         {
-            img:'http://placehold.it/300x200/CF364A/fff',
+            img:'http://lorempixel.com/300/200/nature',
             name:'Umeed',
             ngo: {
                name : 'Lorem',
@@ -75,7 +203,7 @@ app.controller('PhotoGridCtrl',['$scope','fgDelegate',function($scope,fgDelegate
             shortDesc: 'Lorem ipsum'
         },
         {
-            img:'http://placehold.it/300x400/E59649/fff',
+            img:'http://lorempixel.com/300/400/nature',
             name:'Sapne',
             ngo: {
                name : 'Lorem',
@@ -85,7 +213,7 @@ app.controller('PhotoGridCtrl',['$scope','fgDelegate',function($scope,fgDelegate
             shortDesc: 'Lorem ipsum'
         },
         {
-            img:'http://placehold.it/350x500/75A0CC/fff',
+            img:'http://lorempixel.com/350/500/nature',
             name:'Muskaan',
             ngo: {
                name : 'Lorem',
@@ -95,7 +223,7 @@ app.controller('PhotoGridCtrl',['$scope','fgDelegate',function($scope,fgDelegate
             shortDesc: 'Lorem ipsum'
         },
         {
-            img:'http://placehold.it/300x200/4296AD/fff',
+            img:'http://lorempixel.com/300/200/nature',
             name:'Roshni',
             ngo: {
                name : 'Lorem',
@@ -105,7 +233,7 @@ app.controller('PhotoGridCtrl',['$scope','fgDelegate',function($scope,fgDelegate
             shortDesc: 'Lorem ipsum'
         },
         {
-            img:'http://placehold.it/300x400/9FDBC7/fff',
+            img:'http://lorempixel.com/300/400/nature',
             name:'Khushi',
             ngo: {
                name : 'Lorem',
@@ -115,7 +243,7 @@ app.controller('PhotoGridCtrl',['$scope','fgDelegate',function($scope,fgDelegate
             shortDesc: 'Lorem ipsum'
         },
         {
-            img:'http://placehold.it/300x300/4E8EF7/fff',
+            img:'http://lorempixel.com/300/300/nature',
             name:'Paheli',
             ngo: {
                name : 'Lorem',
@@ -127,19 +255,26 @@ app.controller('PhotoGridCtrl',['$scope','fgDelegate',function($scope,fgDelegate
         
     ]
 
-    $scope.addItem = function(){
-        var randomIndex = Math.floor(Math.random(0,1)* $scope.items.length)
-        var newItem = {
-            name:$scope.items[randomIndex].name,
-            img:$scope.items[randomIndex].img
-        }
-        // add a new item;
-        $scope.items.splice(0,0,newItem);
 
-        // make sure ngRepeat is finished rendering
-        $scope.$watch('$last',function(){
-            fgDelegate.getFlow('demoGird').itemsChanged();
-        });
+
+    $scope.addItem = function(){
+        $scope.loadText = "Loading..";
+        for(campaign in $scope.newCampaigns){
+
+            var newItem = $scope.newCampaigns[campaign];
+            //debugger;
+            // add a new item;
+            $scope.campaigns.splice(0,0,newItem);
+        }
+
+
+            // make sure ngRepeat is finished rendering
+            $scope.$watch('$last',function(){
+                fgDelegate.getFlow('demoGird').itemsChanged();
+                $scope.addItem = function() {};
+            });
+            $scope.loadText = "No more results..";
+            $scope.loaded = true;
     }
 
     $scope.changeWidth = function(width){
