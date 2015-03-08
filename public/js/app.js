@@ -6,73 +6,122 @@ app.controller('PhotoGridCtrl',['$scope','fgDelegate',function($scope,fgDelegate
         {
             img:'http://placehold.it/300x600/E97452/fff',
             name:'Udaan',
-            ngo: 'Lorem',
-            shortDesc: 'Rise and fly'
+            ngo: {
+               name : 'Lorem',
+               url : '/ngo/n111001'
+            },
+            shortDesc: 'Rise and fly',
+            url: '/campaign/c11001',
+            id: '110001'
         },
         {
             img:'http://placehold.it/300x400/E59649/fff',
             name:'Hope',
-            ngo: 'Lorem',
+            ngo: {
+               name : 'Lorem',
+               url : '/ngo/n111001'
+            },
+            url: '/campaign/c11001',
             shortDesc: 'We make you see the world with a new hope..'
         },
         {
             img:'http://placehold.it/300x300/4C6EB4/fff',
             name:'Khusiyaan',
-            ngo: 'Lorem',
+            ngo: {
+               name : 'Lorem',
+               url : '/ngo/n111001'
+            },
+            url: '/campaign/c11001',
             shortDesc: 'We spread happiness'
         },
         {
             img:'http://placehold.it/300x250/449F93/fff',
             name:'Umeed',
-            ngo: 'Lorem',
+            ngo: {
+               name : 'Lorem',
+               url : '/ngo/n111001'
+            },
+            url: '/campaign/c11001',
             shortDesc: 'Lorem ipsum'
         },
         {
             img:'http://placehold.it/200x320/936FBC/fff',
             name:'New Horizon',
-            ngo: 'Lorem',
+            ngo: {
+               name : 'Lorem',
+               url : '/ngo/n111001'
+            },
+            url: '/campaign/c11001',
             shortDesc: 'Lorem ipsum'
         },
         {
             img:'http://placehold.it/400x500/D25064/fff',
             name:'Nanhi si duniya',
-            ngo: 'Lorem',
+            ngo: {
+               name : 'Lorem',
+               url : '/ngo/n111001'
+            },
+            url: '/campaign/c11001',
             shortDesc: 'Lorem ipsum'
         },
         {
             img:'http://placehold.it/300x200/CF364A/fff',
             name:'Umeed',
-            ngo: 'Lorem',
+            ngo: {
+               name : 'Lorem',
+               url : '/ngo/n111001'
+            },
+            url: '/campaign/c11001',
             shortDesc: 'Lorem ipsum'
         },
         {
             img:'http://placehold.it/300x400/E59649/fff',
             name:'Sapne',
-            ngo: 'Lorem',
+            ngo: {
+               name : 'Lorem',
+               url : '/ngo/n111001'
+            },
+            url: '/campaign/c11001',
             shortDesc: 'Lorem ipsum'
         },
         {
             img:'http://placehold.it/350x500/75A0CC/fff',
             name:'Muskaan',
-            ngo: 'Lorem',
+            ngo: {
+               name : 'Lorem',
+               url : '/ngo/n111001'
+            },
+            url: '/campaign/c11001',
             shortDesc: 'Lorem ipsum'
         },
         {
             img:'http://placehold.it/300x200/4296AD/fff',
             name:'Roshni',
-            ngo: 'Lorem',
+            ngo: {
+               name : 'Lorem',
+               url : '/ngo/n111001'
+            },
+            url: '/campaign/c11001',
             shortDesc: 'Lorem ipsum'
         },
         {
             img:'http://placehold.it/300x400/9FDBC7/fff',
             name:'Khushi',
-            ngo: 'Lorem',
+            ngo: {
+               name : 'Lorem',
+               url : '/ngo/n111001'
+            },
+            url: '/campaign/c11001',
             shortDesc: 'Lorem ipsum'
         },
         {
             img:'http://placehold.it/300x300/4E8EF7/fff',
             name:'Paheli',
-            ngo: 'Lorem',
+            ngo: {
+               name : 'Lorem',
+               url : '/ngo/n111001'
+            },
+            url: '/campaign/c11001',
             shortDesc: 'Lorem ipsum'
         },
         
