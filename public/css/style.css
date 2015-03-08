@@ -1,0 +1,32 @@
+body{
+	background-color: #DDD;
+}
+.flowGrid{position: relative;padding: 0;}
+    .flowGrid:before,.flowGrid:after{
+        content: "";
+        display: table;
+    }
+    .flowGrid:after{
+        clear:both;
+    }
+    .flowGridItem{ list-style: none;padding: 5px;
+  border: 1px solid #FFF;
+  border-radius: 5px;
+  background: #FFF;
+  margin-bottom: 10px;}
+    .flowGridItem img{width:100%;}
+    .flowGridColumn{
+        float: left;
+        padding-left: 10px;
+    }
+    .flowGridColumn:last-of-type{
+        padding-right: 10px;
+    }
+    .flowGridMetadata{
+    	padding: 5px;
+    }
+
+    .flowGridMetadata .shortDesc{
+    	font-size: 12px;
+  color: #838383;
+    }

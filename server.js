@@ -2,6 +2,7 @@
 
 var express = require('express');
 var fs      = require('fs');
+var path      = require('path');
 
 var CampaignIndia = function() {
 
@@ -107,7 +108,7 @@ var CampaignIndia = function() {
      */
     self.initializeServer = function() {
         self.createRoutes();
-        self.app = express.createServer();
+        self.app = express();
 
         //  Add handlers for the app (from the routes).
         for (var r in self.routes) {
@@ -137,7 +138,7 @@ var CampaignIndia = function() {
         //  Start the app on the specific interface (and port).
 
 
-        //self.app.use(express.static(path.join(__dirname, 'public'),options));
+        self.app.use(express.static(path.join(__dirname, 'public')));
         self.app.listen(self.port, self.ipaddress, function() {
             console.log('%s: Node server started on %s:%d ...',
                         Date(Date.now() ), self.ipaddress, self.port);
