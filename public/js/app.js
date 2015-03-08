@@ -62,11 +62,11 @@ app.controller('PhotoGridCtrl',['$scope','fgDelegate',function($scope,fgDelegate
                url : '/ngo/n111001'
             },
             url: '/campaign/c11001',
-            shortDesc: 'Lorem ipsum'
+            shortDesc: 'Preserving Childhood'
         },
         {
             img:'/img/camp7.jpeg',
-            name:'Umeed',
+            name:'Hosala',
             ngo: {
                name : 'Hope Foundation',
                url : '/ngo/n111001'
