@@ -101,6 +101,8 @@ var CampaignIndia = function() {
             res.send(self.cache_get('index.html') );
         };
 
+        
+
         self.routes['/campaign/:id'] = function(req, res) {
             res.setHeader('Content-Type', 'text/html');
             res.send(self.cache_get('campaign.html') );
