@@ -1,94 +1,117 @@
-body{
-	background: url('/img/bg-grey.png') repeat;
+body {
+    background:url(/img/bg-grey.png) repeat
 }
-body.campaign-page,body.ngo-page{
-	background: #FFF;
-}
-.flowGrid{position: relative;padding: 0;}
-    .flowGrid:before,.flowGrid:after{
-        content: "";
-        display: table;
-    }
-    .flowGrid:after{
-        clear:both;
-    }
-    .flowGridItem{ list-style: none;padding: 5px;
-  border: 1px solid #FFF;
-  border-radius: 5px;
-  background: #FFF;
-  margin-bottom: 10px;}
-    .flowGridItem img{width:100%;}
-    .flowGridColumn{
-        float: left;
-        padding-left: 10px;
-    }
-    .flowGridColumn:last-of-type{
-        padding-right: 10px;
-    }
-    .flowGridMetadata{
-    	padding: 5px;
-    }
 
-    .flowGridMetadata .shortDesc{
-    	font-size: 12px;
-  color: #838383;
-    }
+body.campaign-page,body.ngo-page {
+    background:#FFF
+}
+
+.flowGrid {
+    position:relative;
+    padding:0
+}
+
+.flowGrid:before,.flowGrid:after {
+    content:"";
+    display:table
+}
+
+.flowGrid:after {
+    clear:both
+}
+
+.flowGridItem {
+    list-style:none;
+    padding:5px;
+    border:1px solid #FFF;
+    border-radius:5px;
+    background:#FFF;
+    margin-bottom:10px
+}
+
+.flowGridItem img {
+    width:100%
+}
+
+.flowGridColumn {
+    float:left;
+    padding-left:10px
+}
+
+.flowGridColumn:last-of-type {
+    padding-right:10px
+}
+
+.flowGridMetadata {
+    padding:5px
+}
+
+.flowGridMetadata .shortDesc {
+    font-size:12px;
+    color:#838383
+}
 
 .page-header {
-	text-align: center;
-  color: #6c6c6c;
-  text-shadow: 1px 0px #000;
-  padding: 20px;
-  margin: 0;
+    text-align:center;
+    color:#6c6c6c;
+    text-shadow:1px 0 #000;
+    padding:20px;
+    margin:0
 }
 
-.page-header h1{
-	margin: 0;
+.page-header h1 {
+    margin:0
 }
 
-.load-more{
-	text-align: center;
-  font-size: 18px;
-  padding: 5px;
-  margin: 0 10px;
-  text-shadow: 1px 0px #e3e3e3;
-  cursor: pointer;
+.load-more {
+    text-align:center;
+    font-size:18px;
+    padding:5px;
+    margin:0 10px;
+    text-shadow:1px 0 #e3e3e3;
+    cursor:pointer
 }
 
 .campaign-page .page-header {
-	text-align: center;
-  background: #E59649;
-  color: #FFF;
-  padding: 20px;
-  margin: 0;
+    text-align:center;
+    background:#E59649;
+    color:#FFF;
+    padding:20px;
+    margin:0
 }
 
-.campaign-page .page-header h1{
-	margin: 0;
+.campaign-page .page-header h1 {
+    margin:0
 }
 
-.campaign-page .page-header small{
-  color: #FFF;
+.campaign-page .page-header small {
+    color:#FFF
 }
-.campaign-page  .pull-left,.campaign-page .panel-heading, .campaign-page .caption{
-		color: #449F93;
+
+.campaign-page .pull-left,.campaign-page .panel-heading,.campaign-page .caption {
+    color:#449F93
 }
 
 .ngo-page .page-header {
-	text-align: center;
-  background: #4C6EB4;
-  color: #FFF;
-  padding: 20px;
-  margin: 0;
+    text-align:center;
+    background:#4C6EB4;
+    color:#FFF;
+    padding:20px;
+    margin:0
 }
 
-.ngo-page .page-header h1{
-	margin: 0;
+.ngo-page .page-header h1 {
+    margin:0
 }
 
-.ngo-page .page-header small{
-  color: #FFF;
+.ngo-page .page-header small {
+    color:#FFF
 }
-.ngo-page  .pull-left,.ngo-page .panel-heading, .ngo-page .caption{
-		color: #75A0CC;
+
+.ngo-page .pull-left,.ngo-page .panel-heading,.ngo-page .caption {
+    color:#75A0CC
+}
+
+.breadcrumb {
+    background-color:#FFF
 }

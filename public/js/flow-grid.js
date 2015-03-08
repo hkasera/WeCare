@@ -1,15 +1,3 @@
-/*! 
- * ngFlowGrid v0.0.1
- * http://eisneim.github.io/ngFlowGrid
- * Copyright (c) 2014 eisneim.com
- * License: MIT
- */
-
-/**
- * TODO 
- * 1.css3 transition option
- * 2. in one column split 2 image;
- */
 (function() {
 
 'use strict';
