@@ -75,7 +75,7 @@ app.controller('PhotoGridCtrl',['$scope','fgDelegate',function($scope,fgDelegate
             shortDesc: 'Lets get rid of habits that take your lives'
         },
         {
-            img:'/img/camp8.jpg',
+            img:'/img/camp8.jpeg',
             name:'Sapne',
             ngo: {
                name : 'Hope Foundation',
@@ -85,7 +85,7 @@ app.controller('PhotoGridCtrl',['$scope','fgDelegate',function($scope,fgDelegate
             shortDesc: 'Lets fulfill the dreams in those innocent eyes'
         },
         {
-            img:'/img/camp9.jpg',
+            img:'/img/camp9.jpeg',
             name:'Muskaan',
             ngo: {
                name : 'Hope Foundation',
@@ -95,7 +95,7 @@ app.controller('PhotoGridCtrl',['$scope','fgDelegate',function($scope,fgDelegate
             shortDesc: 'Together we can make others smile'
         },
         {
-            img:'/img/camp10.jpg',
+            img:'/img/camp10.jpeg',
             name:'Roshni',
             ngo: {
                name : 'Hope Foundation',
@@ -115,7 +115,7 @@ app.controller('PhotoGridCtrl',['$scope','fgDelegate',function($scope,fgDelegate
             shortDesc: 'One girl with courage is a revolution'
         },
         {
-            img:'/img/camp12.png',
+            img:'/img/camp12.jpeg',
             name:'Health is Wealth',
             ngo: {
                name : 'Hope Foundation',
@@ -123,7 +123,7 @@ app.controller('PhotoGridCtrl',['$scope','fgDelegate',function($scope,fgDelegate
             },
             url: '/campaign/c11001',
             shortDesc: 'Spreading awareness among people about HIV'
-        },
+        }
         
     ]
 }]);

@@ -44,6 +44,8 @@ var CampaignIndia = function() {
         self.zcache['index.html'] = fs.readFileSync('./index.html');
         self.zcache['campaign.html'] = fs.readFileSync('./campaign.html');
         self.zcache['ngo.html'] = fs.readFileSync('./ngo.html');
+
+        self.zcache['campaigns.json'] = fs.readFileSync('./public/dump/campaigns.json','utf8');
     };
 
 
@@ -111,6 +113,11 @@ var CampaignIndia = function() {
         self.routes['/ngo/:id'] = function(req, res) {
             res.setHeader('Content-Type', 'text/html');
             res.send(self.cache_get('ngo.html') );
+        };
+
+        self.routes['/get/campaigns'] = function(req, res) {
+            res.setHeader('Content-Type', 'application/json');
+            res.send(self.cache_get('campaigns.json') );
         };
 
     };
