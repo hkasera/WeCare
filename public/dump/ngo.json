@@ -1,0 +1,33 @@
+{
+            "name":"Hope",
+            "metadata":{
+            	"founder":"John Doe",
+            	"mission":"",
+            	"website":"hopefoundation.org.in",
+            	"contact":"umeed@hope.in"
+            },
+            "campaigns":[
+            	{
+            		"title":"Umeed",
+            		"img":"/img/camp4.jpeg",
+            		"url": "/campaign/c11001",
+                        "shortDesc": "Hope in lives of millions of people"
+            		},
+            	{
+            		"title":"Khusiyaan",
+            		"img":"/img/camp3.jpeg",
+            		"url": "/campaign/c11001",
+                        "shortDesc": "Hope in lives of millions of people"
+            		},
+            	{
+            		"title":"Nanhi si duniya",
+            		"img":"/img/camp6.jpeg",
+            		"url": "/campaign/c11001",
+                        "shortDesc": "Hope in lives of millions of people"
+            	}
+            ],
+            "about":"HOPE foundation works to bring about change in the lives of children, young people and vulnerable individuals. We educate children, provide healthcare and train young people and women in skills for livelihoods.",
+            "shortDesc": "we bring hope in millions of eyes",
+            "url": "/ngo/c11001",
+            "id": "110001"
+}

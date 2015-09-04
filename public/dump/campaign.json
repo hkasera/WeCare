@@ -1,0 +1,38 @@
+{
+			"img":"/img/camp1.jpeg",
+            "name":"Udaan",
+            "ngo": {
+               "name": "Hope Foundation",
+               "url" : "/ngo/n111001",
+               "id" : "n111001"
+            },
+            "metadata":{
+            	"start":"",
+            	"ends":"",
+            	"mission":"",
+            	"website":"hopefoundation.org.in/umeed",
+            	"progress":"60",
+            	"contact":"umeed@hope.in"
+            },
+            "activities":[
+            	{
+            		"title":"Healthcare",
+            		"img":"/img/camp12.jpeg",
+            		"desc":"Free diagnosis and awareness among people"
+            		},
+            	{
+            		"title":"Food",
+            		"img":"/img/camp5.jpeg",
+            		"desc":"Distribute food to needy"
+            		},
+            	{
+            		"title":"Motivate",
+            		"img":"/img/camp9.jpeg",
+            		"desc":"Help motivate children to do extraordinary activities"
+            	}
+            ],
+            "about":"Umeed's mission is to help people with disabilities, or at high risk for disabilities, reach their maximum potential and be included in society.",
+            "shortDesc": "Rise and fly",
+            "url": "/campaign/c11001",
+            "id": "110001"
+}
