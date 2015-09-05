@@ -18,17 +18,20 @@
             	{
             		"title":"Healthcare",
             		"img":"/img/camp12.jpeg",
-            		"desc":"Free diagnosis and awareness among people"
+            		"desc":"Free diagnosis and awareness among people",
+            		"id":"a100001"
             		},
             	{
             		"title":"Food",
             		"img":"/img/camp5.jpeg",
-            		"desc":"Distribute food to needy"
+            		"desc":"Distribute food to needy",
+            		"id":"a100002"
             		},
             	{
             		"title":"Motivate",
             		"img":"/img/camp9.jpeg",
-            		"desc":"Help motivate children to do extraordinary activities"
+            		"desc":"Help motivate children to do extraordinary activities",
+            		"id":"a100003"
             	}
             ],
             "about":"Umeed's mission is to help people with disabilities, or at high risk for disabilities, reach their maximum potential and be included in society.",

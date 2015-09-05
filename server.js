@@ -42,12 +42,12 @@ var CampaignIndia = function() {
 
         //  Local cache for static content.
         self.zcache['index.html'] = fs.readFileSync('./index.html');
-        self.zcache['campaign.html'] = fs.readFileSync('./campaign.html');
-        self.zcache['ngo.html'] = fs.readFileSync('./ngo.html');
+        self.zcache['campaign.html'] = fs.readFileSync('./app/views/campaign.html');
+        self.zcache['ngo.html'] = fs.readFileSync('./app/views/ngo.html');
 
-        self.zcache['campaigns.json'] = fs.readFileSync('./public/dump/campaigns.json','utf8');
-        self.zcache['campaign.json'] = fs.readFileSync('./public/dump/campaign.json','utf8');
-        self.zcache['ngo.json'] = fs.readFileSync('./public/dump/ngo.json','utf8');
+        /*self.zcache['campaigns.json'] = fs.readFileSync('./app/dummy/campaigns.json','utf8');
+        self.zcache['campaign.json'] = fs.readFileSync('./app/dummy/campaign.json','utf8');
+        self.zcache['ngo.json'] = fs.readFileSync('./app/dummy/ngo.json','utf8');*/
     };
 
 
@@ -117,7 +117,7 @@ var CampaignIndia = function() {
             res.send(self.cache_get('ngo.html') );
         };
 
-        self.routes['/get/campaigns'] = function(req, res) {
+        /*self.routes['/get/campaigns'] = function(req, res) {
             res.setHeader('Content-Type', 'application/json');
             res.send(self.cache_get('campaigns.json') );
         };
@@ -130,7 +130,7 @@ var CampaignIndia = function() {
         self.routes['/get/ngo/:id'] = function(req, res) {
             res.setHeader('Content-Type', 'application/json');
             res.send(self.cache_get('ngo.json') );
-        };
+        };*/
 
     };
 
@@ -147,6 +147,8 @@ var CampaignIndia = function() {
         for (var r in self.routes) {
             self.app.get(r, self.routes[r]);
         }
+
+        require('./app/routes/apiroutes')(self);
 
     };
 
