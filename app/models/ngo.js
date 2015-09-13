@@ -3,8 +3,7 @@ var mongojs = require('mongojs');
 var ObjectId = mongojs.ObjectId; 
 module.exports = {
 	getAllNGOs: function(req, res){   
-   		var ngo = db.collection('ngo');,
-   			campaign = db.collection('campaign');
+   		var ngo = db.collection('ngo');
    		db.ngo.find({},function(err, docs) {
 	       	res.send(docs);
 	    });      
