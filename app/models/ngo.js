@@ -3,7 +3,11 @@ var mongojs = require('mongojs');
 var ObjectId = mongojs.ObjectId; 
 module.exports = {
 	getAllNGOs: function(req, res){   
-   	        
+   		var ngo = db.collection('ngo');,
+   			campaign = db.collection('campaign');
+   		db.ngo.find({},function(err, docs) {
+	       	res.send(docs);
+	    });      
 	},
 
 	getNGODetails: function(req, res){   
@@ -13,7 +17,7 @@ module.exports = {
     		var ngo_campaigns = db.campaign.find({_id: { $in : docs.campaigns } } ,function(er,dc){
     			docs.campaigns = dc;
     			res.send(docs);
-    		})
+    		});
     		  
     	}); 
 	},

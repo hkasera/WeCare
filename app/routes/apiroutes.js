@@ -7,6 +7,10 @@ module.exports = function(self){
         Campaign.getAllCampaigns(req,res);
     });
 
+    self.app.get('/get/ngo' , function(req, res) {
+        NGO.getAllNGOs(req,res);
+    });
+
     self.app.get('/get/ngo/:id' , function(req, res) {
         NGO.getNGODetails(req, res);
     });
