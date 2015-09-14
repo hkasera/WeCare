@@ -36,6 +36,22 @@ module.exports = {
     							});
 	},
 
+	getCampaignMinimalDetails: function(req, res){   
+   	    var campaign = db.collection('campaign');
+    	db.campaign.findOne(
+    		{ _id: ObjectId(req.params.id)},
+    		{
+   				"img": true,
+    			"mission": true,
+    			"name":true,
+    			"shortDesc":true,
+    			"url":true,
+    			"ngo":true
+    		}, function(err, docs) {
+        		res.send(docs);  
+    	}); 
+	},
+
 	getCampaignDetails: function(req, res){   
    	    var campaign = db.collection('campaign');
     	db.campaign.findOne({ _id: ObjectId(req.params.id)}, function(err, docs) {
