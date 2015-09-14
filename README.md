@@ -3,3 +3,8 @@ A platform that helps you discover various social campaigns run by NGO's. It als
 
 URL : http://campaignindia-funlab.rhcloud.com/
 
+
+## API Reference
+
+https://github.com/hkasera/WeCare/wiki/API-Reference
+
