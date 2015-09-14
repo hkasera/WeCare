@@ -21,6 +21,27 @@ module.exports = {
     	}); 
 	},
 
+	getNGOCampaigns: function(req, res){  
+		var ngo = db.collection('ngo'),
+			campaign = db.collection('campaign'); 
+		db.ngo.findOne({ _id: ObjectId(req.params.id)}, function(err, docs) {
+    		var ngo_campaigns = db.campaign.find(
+    								{_id: { $in : docs.campaigns } },
+						   			{
+						   				"img": true,
+						    			"mission": true,
+						    			"name":true,
+						    			"shortDesc":true,
+						    			"url":true,
+						    			"ngo":true
+						    		} ,
+    								function(er,dc){
+    									res.send(dc);
+    							});
+    		  
+    						}); 
+	},
+
 	addNGO: function(req, res){
        
 	},

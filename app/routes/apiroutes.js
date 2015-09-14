@@ -15,6 +15,10 @@ module.exports = function(self){
         NGO.getNGODetails(req, res);
     });
 
+     self.app.get('/get/ngo/:id/campaigns' , function(req, res) {
+        NGO.getNGOCampaigns(req, res);
+    });
+
     self.app.get('/get/campaign/:id' , function(req, res) {
         Campaign.getCampaignDetails(req, res);
     });
