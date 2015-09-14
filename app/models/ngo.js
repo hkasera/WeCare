@@ -24,10 +24,20 @@ module.exports = {
    	    var ngo = db.collection('ngo'),
    	    	campaign = db.collection('campaign');
     	db.ngo.findOne({ _id: ObjectId(req.params.id)}, function(err, docs) {
-    		var ngo_campaigns = db.campaign.find({_id: { $in : docs.campaigns } } ,function(er,dc){
-    			docs.campaigns = dc;
-    			res.send(docs);
-    		});
+    		var ngo_campaigns = db.campaign.find(
+    				{_id: { $in : docs.campaigns } } ,
+    				{
+						   				"img": true,
+						    			"mission": true,
+						    			"name":true,
+						    			"shortDesc":true,
+						    			"url":true,
+						    			"ngo":true
+						    		},
+    				function(er,dc){
+    					docs.campaigns = dc;
+    					res.send(docs);
+    				});
     		  
     	}); 
 	},
