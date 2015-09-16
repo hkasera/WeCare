@@ -31,8 +31,7 @@ module.exports = {
 						    			"mission": true,
 						    			"name":true,
 						    			"shortDesc":true,
-						    			"url":true,
-						    			"ngo":true
+						    			"url":true
 						    		},
     				function(er,dc){
     					docs.campaigns = dc;
