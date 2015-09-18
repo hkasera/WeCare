@@ -1,10 +1,13 @@
 #!/bin/env node
-
+//  OpenShift sample Node application
 var express = require('express');
 var fs      = require('fs');
 var path      = require('path');
 
-var CampaignIndia = function() {
+/**
+ *  Define the sample application.
+ */
+var SampleApp = function() {
 
     //  Scope.
     var self = this;
@@ -28,7 +31,6 @@ var CampaignIndia = function() {
             console.warn('No OPENSHIFT_NODEJS_IP var, using 127.0.0.1');
             self.ipaddress = "127.0.0.1";
         };
-
     };
 
 
@@ -42,12 +44,8 @@ var CampaignIndia = function() {
 
         //  Local cache for static content.
         self.zcache['index.html'] = fs.readFileSync('./index.html');
-        self.zcache['campaign.html'] = fs.readFileSync('./app/views/campaign.html');
-        self.zcache['ngo.html'] = fs.readFileSync('./app/views/ngo.html');
-
-        /*self.zcache['campaigns.json'] = fs.readFileSync('./app/dummy/campaigns.json','utf8');
-        self.zcache['campaign.json'] = fs.readFileSync('./app/dummy/campaign.json','utf8');
-        self.zcache['ngo.json'] = fs.readFileSync('./app/dummy/ngo.json','utf8');*/
+        self.zcache['campaign.html'] = fs.readFileSync('./ngo.html');
+        self.zcache['ngo.html'] = fs.readFileSync('./ngo.html');
     };
 
 
@@ -99,13 +97,12 @@ var CampaignIndia = function() {
     self.createRoutes = function() {
         self.routes = { };
 
+  
 
         self.routes['/'] = function(req, res) {
             res.setHeader('Content-Type', 'text/html');
             res.send(self.cache_get('index.html') );
         };
-
-        
 
         self.routes['/campaign/:id'] = function(req, res) {
             res.setHeader('Content-Type', 'text/html');
@@ -116,22 +113,6 @@ var CampaignIndia = function() {
             res.setHeader('Content-Type', 'text/html');
             res.send(self.cache_get('ngo.html') );
         };
-
-        /*self.routes['/get/campaigns'] = function(req, res) {
-            res.setHeader('Content-Type', 'application/json');
-            res.send(self.cache_get('campaigns.json') );
-        };
-
-        self.routes['/get/campaign/:id'] = function(req, res) {
-            res.setHeader('Content-Type', 'application/json');
-            res.send(self.cache_get('campaign.json') );
-        };
-
-        self.routes['/get/ngo/:id'] = function(req, res) {
-            res.setHeader('Content-Type', 'application/json');
-            res.send(self.cache_get('ngo.json') );
-        };*/
-
     };
 
 
@@ -141,15 +122,13 @@ var CampaignIndia = function() {
      */
     self.initializeServer = function() {
         self.createRoutes();
-        self.app = express();
+        self.app = express.createServer();
 
         //  Add handlers for the app (from the routes).
         for (var r in self.routes) {
             self.app.get(r, self.routes[r]);
         }
-
         require('./app/routes/apiroutes')(self);
-
     };
 
 
@@ -171,15 +150,11 @@ var CampaignIndia = function() {
      */
     self.start = function() {
         //  Start the app on the specific interface (and port).
-
-
         self.app.use(express.static(path.join(__dirname, 'public')));
         self.app.listen(self.port, self.ipaddress, function() {
             console.log('%s: Node server started on %s:%d ...',
                         Date(Date.now() ), self.ipaddress, self.port);
         });
-
-
     };
 
 };   /*  Sample Application.  */
@@ -189,7 +164,7 @@ var CampaignIndia = function() {
 /**
  *  main():  Main code.
  */
-var capp = new CampaignIndia();
-capp.initialize();
-capp.start();
+var zapp = new SampleApp();
+zapp.initialize();
+zapp.start();
 

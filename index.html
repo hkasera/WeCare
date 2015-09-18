@@ -1,45 +1,54 @@
-<!DOCTYPE html>
-
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>Campaign India</title>
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <title>WeCare</title>
+    <link rel="icon" type="image/x-icon" href="/img/icon.ico" />
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/waterfall.css">
 </head>
+<body>
+<div id="header">
+    <h1>WeCare</h1>
+</div>
+<div id="container"></div>
 
-<body ng-app="CampaignIndiaCtrl">
-  <div class="page-header">
-    <h1>Campaign India <br /><small>Let's make society a better place to live in!</small></h1>
-  </div>
-	<div class="container-fluid">  
-		<div class="row">
-      <div ng-controller="PhotoGridCtrl">
-        <ul class="flowGrid" ng-flow-grid="demoGird" min-item-width="200">
-          <li class="flowGridItem" ng-repeat="campaign in campaigns">
-              <a ng-href="{{campaign.url}}" class="flowGridImg"><img ng-src="{{campaign.img}}"></a>
-              <p class="flowGridMetadata">
-                <span ng-bind="campaign.name">
-                </span>
-                <br/>
-                <span class="shortDesc" ng-bind="campaign.shortDesc">
-                </span>
-                <br />
-                <span class="shortDesc">
-                  <i>by</i>&nbsp;<a ng-href="{{campaign.ngo.url}}" ng-bind="campaign.ngo.name"></a>
-                </span>
-              </p>
-          </li>
-        </ul>
-      </div>  
+<script type="text/x-handlebars-template" id="waterfall-tpl">
+{{#each this}}
+    <div class="item">
+    	<a href="/campaign/{{_id}}">
+	        <img src="{{img}}" width="192"/>
+	        <div class="campaign-meta">
+	            <div class="campaign-name">{{name}}</div>
+	            <div class="shortDesc">{{shortDesc}}</div>
+	            <div class="ngoDesc">
+	                Hope Foundation
+	            </div>
+	        </div>
+        </a>
     </div>
-	</div>
-<script type="text/javascript" src="/js/angular.min.js"></script>
-<script type="text/javascript" src="/js/flow-grid.js"></script>
-<script type="text/javascript" src="/js/app.js"></script>
+{{/each}}
+</script>
+<script src="/js/jquery.js"></script>
+<script src="/js/handlebars.js"></script>
+<script src="/js/jquery.easing.js"></script>
+<script src="/js/waterfall.js"></script>
+<script>
+$('#container').waterfall({
+    itemCls: 'item',
+    colWidth: 222,
+    gutterWidth: 15,
+    gutterHeight: 15,
+    checkImagesLoaded: false,
+    isAnimated: true,
+    resizable:true,
+    animationOptions: {
+    },
+    path: function(page) {
+        //return 'https://api.myjson.com/bins/2e6zc?page=' + page;
+        return '/get/campaigns';
+    }
+});
+</script>
 </body>
 </html>
