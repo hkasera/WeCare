@@ -117,6 +117,15 @@ a:hover {
 a{
     text-decoration: none;
 }
+.menu-links a{
+    color: #e65100;
+}
+.fright{
+    float: right;
+}
+.fclear{
+    clear: both;
+}
 .item a{
     display: block;
 }
