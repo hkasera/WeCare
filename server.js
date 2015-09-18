@@ -46,6 +46,7 @@ var SampleApp = function() {
         self.zcache['index.html'] = fs.readFileSync('./index.html');
         self.zcache['campaign.html'] = fs.readFileSync('./ngo.html');
         self.zcache['ngo.html'] = fs.readFileSync('./ngo.html');
+        self.zcache['ngos.html'] = fs.readFileSync('./ngos.html');
     };
 
 
@@ -112,6 +113,11 @@ var SampleApp = function() {
         self.routes['/ngo/:id'] = function(req, res) {
             res.setHeader('Content-Type', 'text/html');
             res.send(self.cache_get('ngo.html') );
+        };
+
+        self.routes['/ngos'] = function(req, res) {
+            res.setHeader('Content-Type', 'text/html');
+            res.send(self.cache_get('ngos.html') );
         };
     };
 

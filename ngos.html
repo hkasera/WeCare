@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>WeCare</title>
+    <link rel="icon" type="image/x-icon" href="/img/icon.ico" />
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/waterfall.css">
+</head>
+<body>
+<div id="header">
+    <h1>WeCare</h1>
+</div>
+<div id="container"></div>
+
+<script type="text/x-handlebars-template" id="waterfall-tpl">
+{{#each this}}
+    <div class="item">
+    	<a href="/ngo/{{_id}}">
+	        <img src="{{img}}" width="192"/>
+        </a>
+	   <div class="campaign-meta">
+	       <div class="campaign-name">{{name}}</div>
+	       <div class="shortDesc">{{shortDesc}}</div>
+	   </div>
+        
+    </div>
+{{/each}}
+</script>
+<script src="/js/jquery.js"></script>
+<script src="/js/handlebars.js"></script>
+<script src="/js/jquery.easing.js"></script>
+<script src="/js/waterfall.js"></script>
+<script>
+$('#container').waterfall({
+    itemCls: 'item',
+    colWidth: 222,
+    gutterWidth: 15,
+    gutterHeight: 15,
+    checkImagesLoaded: false,
+    isAnimated: true,
+    resizable:true,
+    animationOptions: {
+    },
+    path: function(page) {
+        //return 'https://api.myjson.com/bins/2e6zc?page=' + page;
+        return '/get/ngo';
+    }
+});
+</script>
+</body>
+</html>
