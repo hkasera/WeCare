@@ -609,13 +609,13 @@
                 resizeTimer;
             
             $window.bind('resize', function() {
-               /* if ( resizeTimer ) {
+                if ( resizeTimer ) {
                     clearTimeout(resizeTimer);
                 }
                 
                 resizeTimer = setTimeout(function() {
                     self._resize();
-                }, 100); */
+                }, 100); 
             });
         }
     };
