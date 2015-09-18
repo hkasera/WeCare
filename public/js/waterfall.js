@@ -607,8 +607,8 @@
         _doResize: function() {
             var self = this,
                 resizeTimer;
-                
-            self._resize();
+
+           
             $window.bind('resize', function() {
                 if ( resizeTimer ) {
                     clearTimeout(resizeTimer);
