@@ -132,4 +132,14 @@ a{
 a.campaign-link{
     color: #00897b;
 }
+.footer{
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+}
+.padding10{
+    padding:10px;
+}
 
