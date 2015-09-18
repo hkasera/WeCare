@@ -2,7 +2,7 @@
 //  OpenShift sample Node application
 var express = require('express');
 var fs      = require('fs');
-
+var path      = require('path');
 
 /**
  *  Define the sample application.
@@ -44,6 +44,8 @@ var SampleApp = function() {
 
         //  Local cache for static content.
         self.zcache['index.html'] = fs.readFileSync('./index.html');
+        self.zcache['campaign.html'] = fs.readFileSync('./ngo.html');
+        self.zcache['ngo.html'] = fs.readFileSync('./ngo.html');
     };
 
 
@@ -95,14 +97,21 @@ var SampleApp = function() {
     self.createRoutes = function() {
         self.routes = { };
 
-        self.routes['/asciimo'] = function(req, res) {
-            var link = "http://i.imgur.com/kmbjB.png";
-            res.send("<html><body><img src='" + link + "'></body></html>");
-        };
+  
 
         self.routes['/'] = function(req, res) {
             res.setHeader('Content-Type', 'text/html');
             res.send(self.cache_get('index.html') );
+        };
+
+        self.routes['/campaign/:id'] = function(req, res) {
+            res.setHeader('Content-Type', 'text/html');
+            res.send(self.cache_get('campaign.html') );
+        };
+
+        self.routes['/ngo/:id'] = function(req, res) {
+            res.setHeader('Content-Type', 'text/html');
+            res.send(self.cache_get('ngo.html') );
         };
     };
 
@@ -119,6 +128,7 @@ var SampleApp = function() {
         for (var r in self.routes) {
             self.app.get(r, self.routes[r]);
         }
+        require('./app/routes/apiroutes')(self);
     };
 
 
@@ -140,6 +150,7 @@ var SampleApp = function() {
      */
     self.start = function() {
         //  Start the app on the specific interface (and port).
+        self.app.use(express.static(path.join(__dirname, 'public')));
         self.app.listen(self.port, self.ipaddress, function() {
             console.log('%s: Node server started on %s:%d ...',
                         Date(Date.now() ), self.ipaddress, self.port);
