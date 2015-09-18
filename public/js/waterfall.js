@@ -556,9 +556,9 @@
             }
             
             this._requestData(function() {
-                var timer = setTimeout(function() {
+                /*var timer = setTimeout(function() {
                     self._scroll();
-                }, 100);
+                }, 100);*/
             });
         },
         
@@ -571,14 +571,14 @@
                 scrollTimer;
             
             $window.bind('scroll', function() {
-                if ( scrollTimer ) {
+                /*if ( scrollTimer ) {
                     clearTimeout(scrollTimer);
                 }
 
                 scrollTimer = setTimeout(function() {
                     //self._debug('event', 'scrolling ...');
                     self._scroll();
-                }, 100);
+                }, 100);*/
             });
         },
         
@@ -609,13 +609,13 @@
                 resizeTimer;
             
             $window.bind('resize', function() {
-                if ( resizeTimer ) {
+               /* if ( resizeTimer ) {
                     clearTimeout(resizeTimer);
                 }
                 
                 resizeTimer = setTimeout(function() {
                     self._resize();
-                }, 100); 
+                }, 100); */
             });
         }
     };
