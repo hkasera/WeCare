@@ -117,6 +117,9 @@ a:hover {
 a{
     text-decoration: none;
 }
+.item a{
+    display: block;
+}
 a.campaign-link{
     color: #00897b;
 }

@@ -1,6 +1,6 @@
 var mongojs = require('mongojs');
 var ObjectId = mongojs.ObjectId;
-var dbName = 'campaignindia';
+var dbName = 'wecare';
 var connection_string;
 if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD){
   connection_string = process.env.OPENSHIFT_MONGODB_DB_USERNAME + ":" +
