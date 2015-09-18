@@ -145,6 +145,30 @@ a.campaign-link{
 .padding10{
     padding:10px;
 }
+.tcenter{
+    text-align: center;
+}
+.container{
+    padding: 10px 20px 0;
+}
+.tbpadding10{
+    padding:10px 0;
+}
+
+.campaign-card{
+    display:inline-block;
+    padding:10px;   
+    margin: 10px;
+    line-height: 1.5;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(34, 25, 25, .4);
+    -moz-box-shadow: 0 1px 3px rgba(34, 25, 25, .4);
+    -webkit-box-shadow: 0 1px 3px rgba(34, 25, 25, .4);
+    filter: progid:DXImageTransform.Microsoft.Shadow(color = #adacac, direction = 135, strength = 2);
+}
+.campaign-card:first-child {
+    margin-left: 0;
+}
 .camp-count{
     position: absolute;
     right: 10px;

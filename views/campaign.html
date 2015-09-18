@@ -20,11 +20,22 @@
     </h1>
     <div class="fclear"></div>
 </div>
-   NGO Page
+<div class="container">
+    <h1 class="tbpadding10 tcenter">
+        <%= campaign.name %> - <%= campaign.subTitle %>
+    </h1>
+    <div class="tbpadding10">
+        <%= campaign.about %>
+    </div>
+    <div>
+        <div>Mission &nbsp; : <span><%= campaign.mission %></span></div>
+    </div>
+</div>
 <div class="footer">
     <div class="padding10">
         &copy;2015 WeCare.
     </div>
 </div>
+
 </body>
 </html>
