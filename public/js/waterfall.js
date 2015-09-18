@@ -65,6 +65,7 @@
                  */
                 loadingFinished: function($loading, isBeyondMaxPage) {
                     $(window).trigger('resize');
+                    $(window).trigger('scroll');
                     if ( !isBeyondMaxPage ) {
                         $loading.fadeOut();
                         //console.log('loading finished');
