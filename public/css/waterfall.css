@@ -126,6 +126,9 @@ a{
 .fclear{
     clear: both;
 }
+.campaign-meta{
+    position: relative;
+}
 .item a{
     display: block;
 }
@@ -133,7 +136,7 @@ a.campaign-link{
     color: #00897b;
 }
 .footer{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     font-size: 12px;
     text-align: center;
@@ -141,5 +144,17 @@ a.campaign-link{
 }
 .padding10{
     padding:10px;
+}
+.camp-count{
+    position: absolute;
+    right: 10px;
+    top: -17px;
+    background-color: #FFF;
+    border-radius: 50%;
+    box-shadow: 0px 1px 0px #BBB;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
 }
 
