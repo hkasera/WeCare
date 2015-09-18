@@ -155,6 +155,10 @@ a.campaign-link{
     padding:10px 0;
 }
 
+.campaign-card-container{
+    margin: 0px auto;
+    text-align: center;
+}
 .campaign-card{
     display:inline-block;
     padding:10px;   
@@ -167,9 +171,7 @@ a.campaign-link{
     filter: progid:DXImageTransform.Microsoft.Shadow(color = #adacac, direction = 135, strength = 2);
     vertical-align: top;
 }
-.campaign-card:first-child {
-    margin-left: 0;
-}
+
 .camp-count{
     position: absolute;
     right: 10px;
