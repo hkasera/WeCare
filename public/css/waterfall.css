@@ -157,4 +157,7 @@ a.campaign-link{
     line-height: 30px;
     text-align: center;
 }
+.ngo-img{
+    min-height: 100px;
+}
 
