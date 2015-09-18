@@ -167,10 +167,10 @@
             
             // bind resize
             if ( options.resizable ) {
-                console.log("resize");
+                //console.log("resize");
                 this._doResize();
             }
-            console.log("fsfr");
+            //console.log("fsfr");
             
             // bind scroll
             this._doScroll();
