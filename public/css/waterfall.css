@@ -110,7 +110,7 @@ a:hover {
 .shortDesc{
     font-size: 13px;
 }
-.ngoDesc{
+.ngoDesc a{
     color: #e65100;
     font-size: 12px;
 }

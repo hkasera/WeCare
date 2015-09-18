@@ -9,7 +9,7 @@
 </head>
 <body>
 <div id="header">
-    <h1>WeCare</h1>
+    <h1><a href="/">WeCare</a></h1>
 </div>
 <div id="container"></div>
 
@@ -23,7 +23,9 @@
 	            <div class="campaign-name">{{name}}</div>
 	            <div class="shortDesc">{{shortDesc}}</div>
 	            <div class="ngoDesc">
-	                {{ngo.name}}
+                    <a href="/ngo/{{ngo._id}}">
+	                   {{ngo.name}}
+                     </a>
 	            </div>
 	        </div>
         
