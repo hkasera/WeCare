@@ -537,7 +537,7 @@
          * prefill
          */
         _prefill: function() {
-            if ( this.$element.height() <= $window.height() && this.options.isAutoPrefill) {
+            if ( this.$element.height() <= $window.height() && !this.options.isAutoPrefill) {
                 this._scroll();
             }
         },
