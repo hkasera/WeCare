@@ -142,6 +142,7 @@ a.campaign-link{
     text-align: center;
     width: 100%;
     background: #FFF;
+    z-index: 2;
 }
 .padding10{
     padding:10px;
@@ -149,7 +150,7 @@ a.campaign-link{
 .tcenter{
     text-align: center;
 }
-.container{
+.container, #container{
     padding: 10px 20px 0;
     margin-bottom: 30px;
 }
