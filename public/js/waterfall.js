@@ -31,7 +31,7 @@
             isAnimated: false, // triggers animate when browser window is resized
             animationOptions: { // animation options
             },
-            isAutoPrefill: true,  // When the document is smaller than the window, load data until the document is larger
+            isAutoPrefill: false,  // When the document is smaller than the window, load data until the document is larger
             checkImagesLoaded: true, // triggers layout when images loaded. Suggest false
             path: undefined, // Either parts of a URL as an array (e.g. ["/popular/page/", "/"] => "/popular/page/1/" or a function that takes in the page number and returns a URL(e.g. function(page) { return '/populr/page/' + page; } => "/popular/page/1/")
             dataType: 'json', // json, jsonp, html
@@ -160,7 +160,7 @@
                 this._debug('Invalid path');
                 return;
             }
-            
+            this._requestData(function() {});
             // auto prefill
             if ( options.isAutoPrefill ) {
                 this._prefill();
@@ -535,7 +535,7 @@
          * prefill
          */
         _prefill: function() {
-            if ( this.$element.height() <= $window.height() ) {
+            if ( this.$element.height() <= $window.height() && this.options.isAutoPrefill) {
                 this._scroll();
             }
         },
