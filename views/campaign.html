@@ -30,6 +30,20 @@
     </div>
     <div>
         <div>Mission &nbsp; : <span><%= campaign.mission %></span></div>
+        <div> 
+        <div class="campaign-card-container">
+        <% for(var i=0; i<campaign.activities.length; i++) { %>
+            <div class="campaign-card">
+                <img src='<%= campaign.activities[i].img %>' width="192"/>
+                <div class="campaign-meta">
+                    <div class="campaign-name"><%= campaign.activities[i].title %></div>
+                    <div class="shortDesc"><%= campaign.activities[i].desc %></div>
+                </div>
+            
+            </div>
+        <% } %>
+        </div>
+    </div>
     </div>
 </div>
 <div class="footer">
