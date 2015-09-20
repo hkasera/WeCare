@@ -29,6 +29,9 @@
     <div class="tcenter subheader">
         <span class="created_at"><%= formatDate(campaign.metadata.startsOn) %>&nbsp;-&nbsp;<%= formatDate(campaign.metadata.endsOn) %></span>
     </div>
+    <div class="tcenter subheader">
+        <span>by <a class="campaign-link" href="/ngo/<%= campaign.ngo._id %>"><%= campaign.ngo.name %></a></span>
+    </div>
     <div class="tbpadding10">
         <%= campaign.about %>
     </div>
