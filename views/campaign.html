@@ -23,9 +23,12 @@
     <div class="fclear"></div>
 </div>
 <div class="container">
-    <h1 class="tbpadding10 tcenter">
+    <h1 class="tbpadding10 tcenter header">
         <%= campaign.name %> - <%= campaign.subTitle %>
     </h1>
+    <div class="tcenter subheader">
+        <span class="created_at"><%= formatDate(campaign.metadata.startsOn) %>&nbsp;-&nbsp;<%= formatDate(campaign.metadata.endsOn) %></span>
+    </div>
     <div class="tbpadding10">
         <%= campaign.about %>
     </div>

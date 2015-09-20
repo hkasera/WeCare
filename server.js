@@ -6,6 +6,9 @@ var path      = require('path');
 var mongojs = require('mongojs');
 var ObjectId = mongojs.ObjectId; 
 var db = require("./db.js"); 
+var moment = require('moment');
+var ejs = require('ejs');
+
 
 var SampleApp = function() {
 
@@ -183,7 +186,11 @@ var SampleApp = function() {
      */
     self.start = function() {
         //  Start the app on the specific interface (and port).
-        self.app.engine('html', require('ejs').renderFile);
+        
+        self.app.locals.formatDate = function(date){
+            return moment(date).format('MMMM Do YYYY');
+        }
+        self.app.engine('html', ejs.renderFile);
         self.app.use(express.static(path.join(__dirname, 'public')));
         self.app.listen(self.port, self.ipaddress, function() {
             console.log('%s: Node server started on %s:%d ...',

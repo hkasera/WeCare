@@ -201,4 +201,11 @@ a.campaign-link{
 .fa.social-icons.fa-twitter{
     color: #55ACEE;
 }
+h1.header{
+    padding-bottom: 0;
+    margin-bottom: 5px;
+}
+.subheader{
+    margin-bottom: 10px;
+}
 
