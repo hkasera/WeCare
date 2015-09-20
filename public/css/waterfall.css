@@ -195,10 +195,10 @@ a.campaign-link{
     padding-right: 10px;
     color: #e65100;
 }
-.fa-facebook-official{
+.fa.social-icons.fa-facebook-official{
         color: #3A5795;
 }
-.fa-twitter{
+.fa.social-icons.fa-twitter{
     color: #55ACEE;
 }
 
