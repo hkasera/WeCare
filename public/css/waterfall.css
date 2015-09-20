@@ -190,4 +190,15 @@ a.campaign-link{
 .ngo-img{
     min-height: 100px;
 }
+.fa.social-icons{
+    font-size: 20px;
+    padding-right: 10px;
+    color: #e65100;
+}
+.fa-facebook-official{
+        color: #3A5795;
+}
+.fa-twitter{
+    color: #55ACEE;
+}
 
