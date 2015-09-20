@@ -571,16 +571,23 @@
             var self = this,
                 scrollTimer;
             
-            $window.bind('scroll', function() {
-                if ( scrollTimer ) {
+            if (scrollTimer ) {
                     clearTimeout(scrollTimer);
-                }
-
-                scrollTimer = setTimeout(function() {
-                    //self._debug('event', 'scrolling ...');
-                    self._scroll();
-                }, 100);
-            });
+            }
+            else{
+                 $window.bind('scroll', function() {
+                    if (scrollTimer ) {
+                        //console.log("cleared out");
+                        clearTimeout(scrollTimer);
+                    }else{
+                        scrollTimer = setTimeout(function() {
+                            //console.log('event', 'scrolling ...');
+                            self._scroll();
+                        }, 100);
+                    }
+                    
+                });
+            }
         },
         
         
