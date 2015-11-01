@@ -1,3 +1,3 @@
-The OpenShift `nodejs` cartridge documentation can be found at:
+## We Care
 
-http://openshift.github.io/documentation/oo_cartridge_guide.html#nodejs
+A digital platform for NGOs to promote their campaigns.
