@@ -3,9 +3,6 @@
 var express = require('express');
 var fs      = require('fs');
 var path      = require('path');
-var mongojs = require('mongojs');
-var ObjectId = mongojs.ObjectId; 
-var db = require("./db.js"); 
 var moment = require('moment');
 var ejs = require('ejs');
 
@@ -97,58 +94,7 @@ var SampleApp = function() {
      *  Create the routing table entries + handlers for the application.
      */
     self.createRoutes = function() {
-        self.routes = { };
-
-  
-
-        self.routes['/'] = function(req, res) {
-            res.setHeader('Content-Type', 'text/html');
-            res.send(self.cache_get('index.html') );
-        };
-
-        self.routes['/campaign/:id'] = function(req, res) {
-            res.setHeader('Content-Type', 'text/html');
-             var campaign = db.collection('campaign');
-            db.campaign.findOne({ _id: ObjectId(req.params.id)}, function(err, docs) {
-                if(!err){
-                    res.render('campaign.html', { campaign: docs });
-                }
-            }); 
-            
-        };
-
-        self.routes['/ngo/:id'] = function(req, res) {
-            res.setHeader('Content-Type', 'text/html');
-            var ngo = db.collection('ngo'),
-            campaign = db.collection('campaign');
-            db.ngo.findOne({ _id: ObjectId(req.params.id)}, function(err, docs) {
-                var ngo_campaigns = db.campaign.find(
-                        {_id: { $in : docs.campaigns } } ,
-                        {
-                                            "img": true,
-                                            "mission": true,
-                                            "name":true,
-                                            "shortDesc":true,
-                                            "url":true
-                                        },
-                        function(er,dc){
-                            if(er){
-
-                            }else{
-                                docs.campaigns = dc;
-                                res.render('ngo.html', { ngo: docs });
-                            }
-                            
-                        });
-                  
-            }); 
-            
-        };
-
-        self.routes['/ngos'] = function(req, res) {
-            res.setHeader('Content-Type', 'text/html');
-            res.send(self.cache_get('ngos.html') );
-        };
+        require('./app/routes/webroutes')(self);
     };
 
 
@@ -157,14 +103,12 @@ var SampleApp = function() {
      *  the handlers.
      */
     self.initializeServer = function() {
-        self.createRoutes();
+        
         self.app = express();
 
-        //  Add handlers for the app (from the routes).
-        for (var r in self.routes) {
-            self.app.get(r, self.routes[r]);
-        }
+        self.createRoutes();
         require('./app/routes/apiroutes')(self);
+        //require('./app/routes/webroutes')(self);
     };
 
 
