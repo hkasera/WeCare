@@ -10,6 +10,14 @@ A digital platform for NGOs to promote their campaigns.
 
 * NGOs to focus on campaign and its publicity at the same time.
 
+### How it works?
+
+* NGOs are provided with an admin console to manage their campaigns. 
+
+* They manage campaigns details on the console and publish them live.
+
+* It gets instantly available to all We Care users on the website and the application.
+
 
 #### Android Application
 
