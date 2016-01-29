@@ -2,6 +2,16 @@
 
 A digital platform for NGOs to promote their campaigns.
 
+#### Android Application
+
+https://play.google.com/store/apps/details?id=com.antrromet.wecare
+
+Link to the repo : https://github.com/antrromet/We-Care
+
+#### Web Application
+
+http://wecare-ghci.rhcloud.com/  
+
 ### What we are solving?
 
 * Lack of awareness of various social campaigns run by NGOs.
@@ -18,17 +28,17 @@ A digital platform for NGOs to promote their campaigns.
 
 * It gets instantly available to all We Care users on the website and the application.
 
+### Future Plans
 
-#### Android Application
+* Dividing Campaigns based on type
 
-https://play.google.com/store/apps/details?id=com.antrromet.wecare
+* Searching for Campaigns
 
-Link to the repo : https://github.com/antrromet/We-Care
+* Reminders for Campaigns
 
-#### Web Application
+* Attracting more NGOs
 
-http://wecare-ghci.rhcloud.com/  
-
+* iOS Mobile App
 
 ### Team
 * Harshita Kasera
