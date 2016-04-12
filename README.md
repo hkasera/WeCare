@@ -1,6 +1,10 @@
-## We Care
+## We Care 
 
 A digital platform for NGOs to promote their campaigns.
+
+#### Installation
+
+Please refer to the [installation guide](https://github.com/hkasera/WeCare/wiki/Installation).
 
 #### Android Application
 
@@ -41,5 +45,5 @@ http://wecare-ghci.rhcloud.com/
 * iOS Mobile App
 
 ### Team
-* Harshita Kasera
-* Antriksh Saxena
+* Harshita Kasera(@hkasera)
+* Antriksh Saxena(@antrromet)
